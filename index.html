@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation with JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div id="result"></div>
+    <form action="" novalidate>
+        <div class="email-container">
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" required>
+            <span class="email-error"></span>
+        </div>
+        <div class="country-container">
+            <label for="country">Country:</label>
+            <input type="text" id="country" list="country-list" required>
+            <span class="country-error"></span>
+            <datalist id="country-list"></datalist>
+        </div>
+        <div class="zip-container">
+            <label for="zip">Zip code:</label>
+            <input type="number" id="zip" min="100001" max="982112" required>
+            <span class="zip-error"></span>
+        </div>
+        <div class="password-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required minlength="7" maxlength="20">
+            <span class="password-error"></span>
+            <div class="password-error-container">
+                <div class="uppercase">one uppercase letter</div>
+                <div class="lowercase">one lowercase letter</div>
+                <div class="number">one number</div>
+                <div class="symbol">one symbol</div>
+            </div>
+        </div>
+        <div class="confirm-password-container">
+            <label for="confirm">Confirm password:</label>
+            <input type="password" id="confirm" required minlength="7" maxlength="20">
+            <span class="confirm-error"></span>
+        </div>
+        <div class="btn-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
+
+<!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" -->
