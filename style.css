@@ -143,4 +143,12 @@ button:hover {
     button {
         width: 60%;
     }
+
+    .password-container>.password-error-container {
+        width: 50%;
+        font-weight: 300;
+        font-size: 15px;
+        left: 0;
+        top: 40px;
+    }
 }
